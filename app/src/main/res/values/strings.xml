@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Digital Recipe Book</string>
+    <string name="enter_recipe_name">Enter recipe name</string>
+    <string name="search_recipes">Search Recipes</string>
+    <string name="search">Search</string>
+    <string name="recipe_image">Recipe Image</string>
+</resources>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RecipeDetails">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/singleRecipeImageMaterialView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/singleRecipeImageView"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:contentDescription="@string/recipe_image" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/singleRecipeNameMaterialView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/singleRecipeImageMaterialView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/singleRecipeNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="5"
+                android:padding="6dp"
+                android:textSize="18sp"
+                tools:text="Recipe Name" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/recipesLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singleRecipeNameMaterialView"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/singleRecipeProteinMaterialView"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#00FF5D"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/singleRecipeProteinTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="5"
+                android:padding="6dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Protein" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/singleRecipeFatMaterialView"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#FFF200"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/singleRecipeFatTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="5"
+                android:padding="6dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Fats" />
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/singleRecipeCarbMaterialView"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#FF9800"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/singleRecipeCarbTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="5"
+                android:padding="6dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Carbs" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singleRecipeDietMaterialView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipesLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/singleRecipeDietTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Recipe Diet" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singleRecipeHealthMaterialView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singleRecipeDietMaterialView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/singleRecipeHealthTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLines="20"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Recipe Health" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singleRecipeCholesterolMaterialView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singleRecipeHealthMaterialView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/singleRecipeCholesterolTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Recipe Cholesterol" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singleRecipeSodiumMaterialView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singleRecipeCholesterolMaterialView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/singleRecipeSodiumTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Recipe Sodium" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singleRecipeCalciumMaterialView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singleRecipeSodiumMaterialView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/singleRecipeCalciumTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Recipe Calcium" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singleRecipeMagnesiumMaterialView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singleRecipeCalciumMaterialView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/singleRecipeMagnesiumTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Recipe Magnesium" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singleRecipePotassiumMaterialView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singleRecipeMagnesiumMaterialView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/singleRecipePotassiumTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Recipe Potassium" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singleRecipeIronMaterialView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singleRecipePotassiumMaterialView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/singleRecipeIronTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Recipe Iron" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singleRecipeCalorieMaterialView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singleRecipePotassiumMaterialView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/singleRecipeCalorieTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Recipe Calorie" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</ScrollView>
+
+
