@@ -24,7 +24,7 @@ A simple recipe search application that tells about recipes and with details tha
 ## Resources
 
 - For Icons - [Flaticon](https://www.flaticon.com/)
-- For Colors - [Marerial Pallete](https://www.materialpalette.com/)
+- For Colors - [Material Pallete](https://www.materialpalette.com/)
 ## Screenshots
 
 |   Splash Screen |  Recipes Item List   |   Recipe Search  | Recipe Details  
